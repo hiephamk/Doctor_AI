@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import { Box, Button, Center, HStack, Input, Text, VStack } from '@chakra-ui/react'
-import { CgAssign } from 'react-icons/cg'
+import { Box, Button, Heading, HStack, Input, Text, VStack } from '@chakra-ui/react'
 import axios from 'axios'
 
 interface DiabetesForm {
@@ -85,114 +84,130 @@ const DiabetesFormComponent = () => {
 
   return (
     <Box>
-        <VStack>
-            <form onSubmit={handleSubmit}>
-                <HStack>
-                    <label htmlFor="Pregnancies">Pregnancies</label>
-                    <Input
-                        type='number'
-                        step='0.01'
-                        name='Pregnancies'
-                        value={formData.Pregnancies}
-                        onChange={handleChange}
-                        placeholder='Pregnancies'
-                        id='Pregnancies'
-                    />
-                </HStack>
-                <HStack>
-                    <label htmlFor="Glucose">Glucose</label>
-                    <Input
-                        type='number'
-                        step='0.01'
-                        name='Glucose'
-                        value={formData.Glucose}
-                        onChange={handleChange}
-                        placeholder='Glucose'
-                        id='Glucose'
-                    />
-                </HStack>
-                <HStack>
-                    <label htmlFor="BloodPressure">BloodPressure</label>
-                    <Input
-                        type='number'
-                        step='0.01'
-                        name='BloodPressure'
-                        value={formData.BloodPressure}
-                        onChange={handleChange}
-                        placeholder='BloodPressure'
-                        id='BloodPressure'
-                    />
-                </HStack>
-                <HStack>
-                    <label htmlFor="SkinThickness">SkinThickness</label>
-                    <Input
-                        type='number'
-                        step='0.01'
-                        name='SkinThickness'
-                        value={formData.SkinThickness}
-                        onChange={handleChange}
-                        placeholder='SkinThickness'
-                        id='SkinThickness'
-                    />
-                </HStack>
-                <HStack>
-                    <label htmlFor="Insulin">Insulin</label>
-                    <Input
-                        type='number'
-                        step='0.01'
-                        name='Insulin'
-                        value={formData.Insulin}
-                        onChange={handleChange}
-                        placeholder='Insulin'
-                        id='Insulin'
-                    />
-                </HStack>
-                <HStack>
-                    <label htmlFor="BMI">BMI</label>
-                    <Input
-                        type='number'
-                        step='0.01'
-                        name='BMI'
-                        value={formData.BMI}
-                        onChange={handleChange}
-                        placeholder='BMI'
-                        id='BMI'
-                    />
-                </HStack>
-                <HStack>
-                    <label htmlFor="DiabetesPedigreeFunction">DiabetesPedigreeFunction</label>
-                    <Input
-                        type='number'
-                        step='0.01'
-                        name='DiabetesPedigreeFunction'
-                        value={formData.DiabetesPedigreeFunction}
-                        onChange={handleChange}
-                        placeholder='DiabetesPedigreeFunction'
-                        id='DiabetesPedigreeFunction'
-                    />
-                </HStack>
-                <HStack>
-                    <label htmlFor="Age">Age</label>
-                    <Input
-                        type='number'
-                        step='0.01'
-                        name='Age'
-                        value={formData.Age}
-                        onChange={handleChange}
-                        placeholder='Age'
-                        id='Age'
-                    />
-                </HStack>
-                <Button type='submit'>Submit</Button>
-            </form>
-            {result && (
-                <Box>
-                    <Text>Result: {result.predictions}</Text>
-                    <Text>Accuracy: {result.accuracy}</Text>
-                    <Text>{result.message}</Text>
-                </Box>
-            )}
-        </VStack>
+        <HStack>
+            <VStack>
+                <Heading>DIABETES RISK DIAGNOSTICS </Heading>
+                <Text>Input Your Parameter Below</Text>
+                <form onSubmit={handleSubmit} >
+                    <VStack gap={"10px"} border={"1px solid"} p={"10px"} rounded={"7px"}>
+                        <HStack w={"300px"} justifyContent={"space-between"}>
+                            <label htmlFor="Pregnancies">Pregnancies</label>
+                            <Input
+                                type='number'
+                                step='0.01'
+                                name='Pregnancies'
+                                value={formData.Pregnancies}
+                                onChange={handleChange}
+                                placeholder='Pregnancies'
+                                id='Pregnancies'
+                                w={"100px"}
+                            />
+                        </HStack>
+                        <HStack w={"300px"} justifyContent={"space-between"}>
+                            <label htmlFor="Glucose">Glucose</label>
+                            <Input
+                                type='number'
+                                step='0.01'
+                                name='Glucose'
+                                value={formData.Glucose}
+                                onChange={handleChange}
+                                placeholder='Glucose'
+                                id='Glucose'
+                                w={"100px"}
+                            />
+                        </HStack>
+                        <HStack w={"300px"} justifyContent={"space-between"}>
+                            <label htmlFor="BloodPressure">BloodPressure</label>
+                            <Input
+                                type='number'
+                                step='0.01'
+                                name='BloodPressure'
+                                value={formData.BloodPressure}
+                                onChange={handleChange}
+                                placeholder='BloodPressure'
+                                id='BloodPressure'
+                                w={"100px"}
+                            />
+                        </HStack>
+                        <HStack w={"300px"} justifyContent={"space-between"}>
+                            <label htmlFor="SkinThickness">SkinThickness</label>
+                            <Input
+                                type='number'
+                                step='0.01'
+                                name='SkinThickness'
+                                value={formData.SkinThickness}
+                                onChange={handleChange}
+                                placeholder='SkinThickness'
+                                id='SkinThickness'
+                                w={"100px"}
+                            />
+                        </HStack>
+                        <HStack w={"300px"} justifyContent={"space-between"}>
+                            <label htmlFor="Insulin">Insulin</label>
+                            <Input
+                                type='number'
+                                step='0.01'
+                                name='Insulin'
+                                value={formData.Insulin}
+                                onChange={handleChange}
+                                placeholder='Insulin'
+                                id='Insulin'
+                                w={"100px"}
+                            />
+                        </HStack>
+                        <HStack w={"300px"} justifyContent={"space-between"}>
+                            <label htmlFor="BMI">BMI</label>
+                            <Input
+                                type='number'
+                                step='0.01'
+                                name='BMI'
+                                value={formData.BMI}
+                                onChange={handleChange}
+                                placeholder='BMI'
+                                id='BMI'
+                                w={"100px"}
+                            />
+                        </HStack>
+                        <HStack w={"300px"} justifyContent={"space-between"}>
+                            <label htmlFor="DiabetesPedigreeFunction">DiabetesPedigreeFunction</label>
+                            <Input
+                                type='number'
+                                step='0.01'
+                                name='DiabetesPedigreeFunction'
+                                value={formData.DiabetesPedigreeFunction}
+                                onChange={handleChange}
+                                placeholder='DiabetesPedigreeFunction'
+                                id='DiabetesPedigreeFunction'
+                                w={"100px"}
+                            />
+                        </HStack>
+                        <HStack w={"300px"} justifyContent={"space-between"}>
+                            <label htmlFor="Age">Age</label>
+                            <Input
+                                type='number'
+                                step='0.01'
+                                name='Age'
+                                value={formData.Age}
+                                onChange={handleChange}
+                                placeholder='Age'
+                                id='Age'
+                                w={"100px"}
+                            />
+                        </HStack>
+                        <Button type='submit'>Submit</Button>
+                        <Box>
+                            {result && (
+                                <Box>
+                                    <Text>Result: {result.predictions}</Text>
+                                    <Text>Accuracy: {result.accuracy}</Text>
+                                    {/* <Text>{result.message}</Text> */}
+                                </Box>
+                            )}
+                        </Box>
+                    </VStack>
+                </form>
+            </VStack>
+        </HStack>
     </Box>
   )
 }

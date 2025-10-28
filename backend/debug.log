@@ -755,3 +755,8 @@ INFO 2025-10-27 10:17:51,157 autoreload 29718 8460961792 Watching for file chang
 INFO 2025-10-27 10:17:53,898 basehttp 29718 6166196224 "POST /api/prediction/result/ HTTP/1.1" 200 72
 INFO 2025-10-27 10:18:56,283 basehttp 29718 6166196224 "POST /api/prediction/result/ HTTP/1.1" 200 72
 INFO 2025-10-27 10:19:30,201 basehttp 29718 6166196224 "POST /api/prediction/result/ HTTP/1.1" 200 72
+INFO 2025-10-27 16:50:13,500 autoreload 29718 8460961792 /Users/hiephuynh/Documents/myapps/Doctor_AI/backend/Healthcare/views.py changed, reloading.
+INFO 2025-10-27 16:50:13,699 autoreload 31365 8460961792 Watching for file changes with StatReloader
+INFO 2025-10-28 08:53:32,690 autoreload 3037 8369424384 Watching for file changes with StatReloader
+INFO 2025-10-28 11:22:48,634 basehttp 3037 6131249152 "OPTIONS /api/prediction/result/ HTTP/1.1" 200 0
+INFO 2025-10-28 11:22:48,657 basehttp 3037 6131249152 "POST /api/prediction/result/ HTTP/1.1" 200 72
